@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 
 // Example mutation
-const updatePageTitle = async (id: number) => {
-	await fetch(`${window.wpApiSettings.root}wp/v2/pages/${id}`, {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-			// This is required for authenticated requests
-			"X-WP-Nonce": window.wpApiSettings.nonce,
-		},
-		credentials: "include",
-		body: JSON.stringify({
-			title: "Hello World",
-		}),
-	});
-};
+// const updatePageTitle = async (id: number) => {
+// 	await fetch(`${window.wpApiSettings.root}wp/v2/pages/${id}`, {
+// 		method: "POST",
+// 		headers: {
+// 			"Content-Type": "application/json",
+// 			// This is required for authenticated requests
+// 			"X-WP-Nonce": window.wpApiSettings.nonce,
+// 		},
+// 		credentials: "include",
+// 		body: JSON.stringify({
+// 			title: "Hello World",
+// 		}),
+// 	});
+// };
 
 const App = () => {
 	const [count, setCount] = useState(0);
